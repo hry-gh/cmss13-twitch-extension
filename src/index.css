@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+#root {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(rgba(0,235,78,.2),rgba(0,235,78,.04));
+}
+
+
+.crt {
+  pointer-events: none;
+
+  &::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background:
+      linear-gradient(hsla(0, 6%, 7%, 0) 50%, hsla(0, 0%, 0%, 0.25) 50%),
+      linear-gradient(
+        90deg,
+        hsla(0, 100%, 50%, 0.06),
+        hsla(120, 100%, 50%, 0.02),
+        hsla(240, 100%, 50%, 0.06)
+      );
+    z-index: 2;
+    background-size:
+      100% 8px,
+      6px 100%;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: hsla(0, 6%, 7%, 0.1);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  box-shadow: 0 0 100px 5px hsla(0, 0%, 0%, 0.9) inset;
+}
+
+.divider {
+  border-top: 3px solid rgb(0, 235, 78);
+  margin-bottom: 5px;
+}
+
+body {
+  background-color: #1a1919;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+
+  font-family: monospace;
+  color: white;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  color: rgb(0, 235, 78);
+  text-align: center;
+}
+
+.section {
+  box-shadow: 0 0 15px #00eb4e;
+  border: 2px solid #00eb4e;
+  background-color: rgba(0, 15, 0, 0.7);
+  padding: 4px;
+}
+
+.button {
+  background-color: #00eb4e;
+  border: 1px solid #00eb4e;
+  color: #1a1919;
+  font-weight: 900;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: #00eb4e
+}
+
+.icon {
+  place-self: center;
+}
