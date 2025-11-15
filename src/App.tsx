@@ -11,6 +11,17 @@ type Auth = {
   userId: string;
 };
 
+declare global {
+  var Twitch: {
+    ext: {
+      onAuthorized: (callback: (auth: Auth) => void) => void;
+      actions: {
+        requestIdShare: () => void;
+      };
+    };
+  };
+}
+
 function App() {
   const [mobs, setMobs] = useState<Mob[]>();
   const [viewerAuth, setViewerAuth] = useState<Auth>();
