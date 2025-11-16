@@ -8,7 +8,7 @@ type Mob = {
 
 type Auth = {
   token: string;
-  userId: string;
+  user_id: string;
 };
 
 declare global {
@@ -58,7 +58,7 @@ function App() {
             .join("")
         );
 
-        const obj = JSON.parse(jsonPayload);
+        const obj: Auth = JSON.parse(jsonPayload);
 
         if (!obj.user_id) {
           window.Twitch.ext.actions.requestIdShare();
